@@ -1,0 +1,14 @@
+ - 
+    name: This is my first play.
+    hosts: webserver1, sqlserver1
+    become: yes
+    user: abhay
+    connection: ssh
+    tasks:
+      - 
+        name: "First Task"
+        command: touch /tmp/task/task1.txt
+        ignore_errors: True
+      - 
+        name: "Second Task"
+        command: touch /tmp/task2.txt

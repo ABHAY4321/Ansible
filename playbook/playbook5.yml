@@ -1,0 +1,31 @@
+-
+
+  name: This is my fifth play first part.
+  hosts: webserver1
+  tasks:
+    -
+
+      name: "Create a dummy file on webserver1"
+      command: touch /tmp/ansible_dummy1.txt
+    
+    -
+      name: "Copy passwd file in tmp folder"
+      command: cp /etc/passwd /tmp/mypasswd  
+
+-
+
+  name: This is fifth play second part.
+  hosts: web_database_servers
+  tasks:
+    -
+
+      name: "Creating directory in tmp directory"
+      command: mkdir -p /tmp/SecondPart
+
+    -
+  
+      name: "Creating a dummy file in database & webserver"
+      command: touch /tmp/SecondPart/secondpart.txt    
+
+  
+

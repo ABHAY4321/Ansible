@@ -1,0 +1,2 @@
+server1 ansible_host=192.168.216.149 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+server2 ansible_host=192.168.216.163 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay

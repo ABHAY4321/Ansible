@@ -1,0 +1,12 @@
+-
+
+    name: This is my first play.
+    hosts: webserver1
+    become: yes
+    user: abhay
+    connection: ssh
+    vars_files:
+      - variable.yml
+    tasks:
+      - include_tasks: task1.yml
+      - include_tasks: task2.yml

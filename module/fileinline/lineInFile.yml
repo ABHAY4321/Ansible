@@ -1,0 +1,9 @@
+  -
+
+    name: This is my fifth play.
+    hosts: webserver1
+    tasks:
+      -
+
+        name: "Create a file on webserver1"
+        lineinfile: path=/tmp/test3.txt line="abhay"

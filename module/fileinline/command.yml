@@ -1,0 +1,9 @@
+-
+
+    name: This is my fourth play.
+    hosts: webserver1
+    tasks:
+      -
+
+        name: "Copy a file on webserver1"
+        command: echo "8.8.8.8" | tee -a /tmp/resolve.conf

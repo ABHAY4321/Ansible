@@ -1,0 +1,28 @@
+-
+
+    name: This is my first play.
+    hosts: webserver1
+    vars:
+      age: 11
+    tasks:
+      -
+
+        name: "Creating file using variable when condition matches"
+        command: touch /tmp/18.txt
+        when: age == 18
+      -
+        name: "Creating file using variable when age 18+"
+        command: touch /tmp/grater_than_18.txt
+        when: age > 18
+      -
+        name: "Creating file using variable when age below 18"
+        command: touch /tmp/less_than_18.txt
+        when: age < 10
+      -
+        name: "Creating file using variable when age is greater than 10 but less than 18"
+        command: touch /tmp/between_10_and_18.txt
+        when: age > 10 and age < 18
+      -
+        name: "Creating file using variable when age equals to 10 or 11"
+        command: touch /tmp/10_or_11.txt
+        when: age == 18 or age == 11

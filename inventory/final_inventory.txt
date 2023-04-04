@@ -1,0 +1,16 @@
+webserver1 ansible_host=192.168.216.149 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+sqlserver1 ansible_host=192.168.216.163 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+windows ansible_host=192.168.216.136 ansible_password=Jerry@4321 ansible_connection=winrm ansible_port=5986 ansible_user=Admin ansible_winrm_server_cert_validation=ignore
+
+[webservers]
+webserver1
+
+
+[databaseservers]
+sqlserver1
+
+
+[web_database_servers]
+webserver1
+sqlserver1
+

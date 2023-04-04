@@ -1,0 +1,10 @@
+-
+
+    name: This is my first play.
+    hosts: webserver1
+    tasks:
+      -
+
+        name: "Create a user & assign password"
+        user: name="harry" state=present password=$6$tCx7ox/NwlSbDDS2$NzbDUFDsuZZ/s5LUwm.9L0sPWJyMXt6XCpDBq/YziOcwfQgWpFe0ooC.3ODOSyyfSgd9XwrLvi8HCMkZUakie1
+        

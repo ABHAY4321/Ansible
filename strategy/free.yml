@@ -1,0 +1,14 @@
+ -
+    name: This is my first play.
+    hosts: webserver1,sqlserver1
+    become: yes
+    user: abhay
+    connection: ssh
+    strategy: free
+    tasks:
+      - 
+        name: "First Task"
+        apt: name="apache2" state=present
+      - 
+        name: "Second Task"
+        command: touch /tmp/strategy_task2.txt

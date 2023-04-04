@@ -1,0 +1,10 @@
+-
+
+    name: This is my first play.
+    hosts: sqlserver1
+    tasks:
+      -
+
+        name: "Create a file on sqlserver1"
+        script: testScript.sh abhay removes=/tmp/test.txt chdir=/home
+          # If /tmp/test.txt exist at nodes, then testScript.sh will be executed with 'pwd' will be '/home'. e it will be skipped

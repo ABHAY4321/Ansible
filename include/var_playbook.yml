@@ -1,0 +1,41 @@
+-
+
+    name: This is my first play.
+    hosts: webserver1
+    become: yes
+    user: abhay
+    connection: ssh
+    vars_files:
+      - variable.yml
+    tasks:
+      -
+
+        name: "task 1"
+        command: touch /tmp/var/{{ var1 }}.txt
+      - 
+        name: "task 2"
+        command: touch /tmp/var/{{ var2 }}.txt
+      - 
+        name: "task 3"
+        command: touch /tmp/var/{{ var3 }}.txt
+      - 
+        name: "task 4"
+        command: touch /tmp/var/{{ var4 }}.txt
+      - 
+        name: "task 5"
+        command: touch /tmp/var/{{ var5 }}.txt
+      - 
+        name: "task 6"
+        command: touch /tmp/var/{{ var6 }}.txt
+      - 
+        name: "task 7"
+        command: touch /tmp/var/{{ var7 }}.txt
+      - 
+        name: "task 8"
+        command: touch /tmp/var/{{ var8 }}.txt
+      - 
+        name: "task 9"
+        command: touch /tmp/var/{{ var9 }}.txt
+      - 
+        name: "task 10"
+        command: touch /tmp/var/{{ var10 }}.txt

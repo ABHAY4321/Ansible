@@ -1,0 +1,10 @@
+webserver1 ansible_host=192.168.216.149 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+sqlserver1 ansible_host=192.168.216.163 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+webserver2 ansible_host=192.168.216.150 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+sqlserver2 ansible_host=192.168.216.164 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+webserver3 ansible_host=192.168.216.151 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+sqlserver3 ansible_host=192.168.216.165 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+webserver4 ansible_host=192.168.216.152 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+sqlserver4 ansible_host=192.168.216.166 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+webserver5 ansible_host=192.168.216.153 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay
+sqlserver5 ansible_host=192.168.216.167 ansible_ssh_pass=Jerry@4321 ansible_connection=ssh ansible_port=22 ansible_user=abhay

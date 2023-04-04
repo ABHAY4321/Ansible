@@ -1,0 +1,12 @@
+-
+
+    name: This is my first play.
+    hosts: webserver1
+    vars:
+      age: 18
+    tasks:
+      -
+
+        name: "Creating file using variable"
+        command: touch /tmp/18.txt
+        when: age == 18

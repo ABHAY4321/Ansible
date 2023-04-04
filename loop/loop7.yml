@@ -1,0 +1,20 @@
+-
+
+    name: This is my first play.
+    hosts: webserver1
+    become: yes
+    user: abhay
+    connection: ssh
+    vars:
+      users:
+        - kumar
+        - pinku
+        - vishal
+        - shifu
+        - john
+    tasks:
+      -
+
+        name: "Deleting users from webserver1"
+        user: name="{{ item }}" state=absent remove=yes
+        with_items: "{{ users }}"

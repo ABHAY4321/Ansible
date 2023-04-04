@@ -1,0 +1,8 @@
+- 
+    name: This is my first play.
+    hosts: webserver1
+    become: yes
+    tasks:
+      - 
+        name: "Create a dummy file on webserver1"
+        lineinfile: dest=/etc/resolv.conf line="nameserver 8.8.8.8"

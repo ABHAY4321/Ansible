@@ -1,0 +1,14 @@
+-
+
+    name: This is my third play.
+    hosts: webserver1
+    tasks:
+      -
+
+        name: "Copy a file on webserver1"
+        copy: 
+          src: test2.txt
+          dest: /tmp/ 
+          owner: pinku
+          group: pinku
+          mode: 0644
