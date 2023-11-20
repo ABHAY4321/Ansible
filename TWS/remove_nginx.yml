@@ -14,7 +14,7 @@
       # path: /var/www/html/index.html
       # state: absent
       ansible.builtin.file:
-        path: /var/www/html   # We are removing entire hrml directory, if we have multiple html files inside it. Else for single html file, use above step.
+        path: /var/www/html   # We are removing entire html directory, if we have multiple html files inside it. Else for single html file, use above step.
         state: absent
 
     - name: Create a directory if it does not exist
