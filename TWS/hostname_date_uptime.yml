@@ -1,0 +1,12 @@
+- 
+  name: Hostname, Date & Uptime Output
+  hosts: dev
+  tasks:
+    - name: Show Hostname
+      command: hostname
+
+    - name: Show Date
+      command: date
+
+    - name: Show Uptime
+      command: uptime  

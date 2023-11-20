@@ -1,0 +1,24 @@
+- 
+  name: Remove Nginx
+  hosts: dev
+  become: yes
+  tasks:
+    - name: Remove Nginx
+      apt:
+        name: nginx
+        state: absent
+        autoremove: yes  
+
+    - name: Remove Webpage
+      #file:
+      # path: /var/www/html/index.html
+      # state: absent
+      ansible.builtin.file:
+        path: /var/www/html   # We are removing entire hrml directory, if we have multiple html files inside it. Else for single html file, use above step.
+        state: absent
+
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /var/www/html
+        state: directory
+        mode: '0755'

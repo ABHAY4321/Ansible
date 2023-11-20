@@ -1,0 +1,15 @@
+- 
+  name: Delete & Re-create Directory
+  hosts: dev
+  become: yes
+  tasks: 
+    - name: Recursively remove directory
+      ansible.builtin.file:
+        path: /home/abhay/flask-app
+        state: absent
+
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /home/abhay/flask-app
+        state: directory
+        mode: '0755'
