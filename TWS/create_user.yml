@@ -1,0 +1,13 @@
+---
+ - name: Add the user 'abhay' with a specific uid, gid, login shell and appending the group 'admin' to the user's groups.
+   hosts: webservers
+   become: yes
+   tasks:
+     - name: Add the user 'abhay' with a specific uid, gid, login shell and appending the group 'admin' to the user's groups.
+       ansible.builtin.user:
+         name: abhay
+         comment: Abhay Singh
+         shell: /bin/bash
+         uid: 1500
+         groups: admin
+         append: yes
