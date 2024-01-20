@@ -1,0 +1,22 @@
+---
+ - name: Setup Docker & give docker access to user 'abhay'
+   hosts: webservers
+   become: yes
+   tasks:
+      - name: Update the system
+        apt:
+          update_cache: yes
+      - name: Setup Docker
+        apt:
+          name: docker.io
+          state: latest
+      - name: Start Docker Service
+        service:
+          name: docker
+          state: started
+          enabled: yes
+      - name: Add user 'abhay' to the 'docker'group.
+        ansible.builtin.user:
+          name: abhay
+          groups: docker
+          append: yes
