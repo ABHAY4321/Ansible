@@ -1,0 +1,14 @@
+ - 
+    name: Add the user 'sachin' with a specific uid, gid, login shell and appending the group 'docker' to the user's groups.
+    hosts: dev
+    become: yes
+    tasks:
+      - name: Add the user 'sachin' with a specific uid, gid, login shell and appending the group 'docker' to the user's groups.
+        ansible.builtin.user:
+          name: sachin
+          comment: Sachin Tendulkar
+          shell: /bin/bash
+          uid: 4000
+          groups: docker
+          append: yes
+          password: "{{ '1234' | password_hash('sha512') }}"
