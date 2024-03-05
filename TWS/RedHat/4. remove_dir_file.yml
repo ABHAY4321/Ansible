@@ -1,0 +1,9 @@
+-
+   name: Remove a directory and file inside it.
+   hosts: dev
+   become: yes
+   tasks:
+    - name: Remove a directory and file inside it.
+      ansible.builtin.file:
+        path: /home/abhay/testdir
+        state: absent
