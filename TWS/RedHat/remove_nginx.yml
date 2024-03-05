@@ -1,0 +1,17 @@
+-
+   name: Remove Nginx.
+   hosts: dev
+   become: yes
+   tasks:
+     - name: Remove Nginx
+       yum:
+         name: nginx
+         state: absent
+         autoremove: yes
+     - name: Deny http traffic
+       ansible.posix.firewalld:
+         service: http
+         permanent: true
+         state: disabled
+     - name: Reload firewall
+       command: firewall-cmd --reload
