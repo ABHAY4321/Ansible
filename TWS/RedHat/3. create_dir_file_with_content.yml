@@ -1,0 +1,15 @@
+-
+   name: Create a directory and then file inside it.
+   hosts: dev
+   become: yes
+   tasks:
+    - name: Create a directory
+      ansible.builtin.file:
+        path: /home/abhay/testdir
+        state: directory
+        mode: '0755'
+    - name: Create a file in this directory & write some content in it.
+      lineinfile:
+        path: /home/abhay/testdir/test.txt
+        line: "Welcome to cricbuzz"
+        create: yes 
