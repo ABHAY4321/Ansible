@@ -1,0 +1,25 @@
+-
+   name: Install Nginx & Server Webpage
+   hosts: dev
+   become: yes
+   tasks:
+     - name: Install Nginx
+       yum:
+         name: nginx
+         state: present
+     - name: Start & Enable Nginx Service
+       service:
+         name: nginx
+         state: started
+         enabled: yes
+     - name: deploy webpage
+       copy:
+         src: index.html
+         dest: /usr/share/nginx/html/
+     - name: Allow http traffic
+       ansible.posix.firewalld:
+         service: http
+         permanent: true
+         state: enabled
+     - name: Reload firewall
+       command: firewall-cmd --reload
